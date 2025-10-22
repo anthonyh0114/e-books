@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RideShareTrack - User's Guide</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f8f9fa;
+        }
+        .container {
+            background-color: white;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #2c3e50;
+            border-bottom: 3px solid #27ae60;
+            padding-bottom: 10px;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        h2 {
+            color: #34495e;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            font-size: 1.4em;
+            border-left: 4px solid #27ae60;
+            padding-left: 15px;
+        }
+        h3 {
+            color: #2c3e50;
+            margin-top: 25px;
+            margin-bottom: 15px;
+            font-size: 1.2em;
+        }
+        h4 {
+            color: #34495e;
+            margin-top: 20px;
+            margin-bottom: 10px;
+            font-size: 1.1em;
+        }
+        p {
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+        ul {
+            margin-bottom: 15px;
+            padding-left: 20px;
+        }
+        li {
+            margin-bottom: 8px;
+        }
+        .quick-start {
+            background: linear-gradient(135deg, #e8f5e8, #d4edda);
+            padding: 25px;
+            border-left: 4px solid #27ae60;
+            margin: 30px 0;
+            border-radius: 8px;
+        }
+        .step {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 15px;
+            padding: 10px;
+            background-color: #f8f9fa;
+            border-radius: 8px;
+        }
+        .step-number {
+            background-color: #27ae60;
+            color: white;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            margin-right: 15px;
+            flex-shrink: 0;
+        }
+        .step-content h4 {
+            margin: 0 0 5px 0;
+            color: #2c3e50;
+        }
+        .step-content p {
+            margin: 0;
+            color: #6c757d;
+            font-size: 0.9em;
+        }
+        .section {
+            margin: 30px 0;
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 4px solid;
+        }
+        .getting-started {
+            background-color: #e3f2fd;
+            border-left-color: #2196f3;
+        }
+        .tracking-trips {
+            background-color: #e8f5e8;
+            border-left-color: #27ae60;
+        }
+        .managing-expenses {
+            background-color: #fff3e0;
+            border-left-color: #ff9800;
+        }
+        .generating-reports {
+            background-color: #f3e5f5;
+            border-left-color: #9c27b0;
+        }
+        .tax-advice {
+            background-color: #ffebee;
+            border-left-color: #f44336;
+        }
+        .troubleshooting {
+            background-color: #f5f5f5;
+            border-left-color: #9e9e9e;
+        }
+        .tip {
+            background-color: #fff3cd;
+            border: 1px solid #ffeaa7;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 15px 0;
+        }
+        .warning {
+            background-color: #f8d7da;
+            border: 1px solid #f5c6cb;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 15px 0;
+        }
+        .pro-tip {
+            background-color: #d1ecf1;
+            border: 1px solid #bee5eb;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 15px 0;
+        }
+        .troubleshooting-item {
+            margin-bottom: 20px;
+            padding: 15px;
+            background-color: #f8f9fa;
+            border-radius: 8px;
+            border-left: 4px solid #dc3545;
+        }
+        .troubleshooting-item h4 {
+            color: #dc3545;
+            margin: 0 0 10px 0;
+        }
+        .troubleshooting-item p {
+            margin: 0;
+            color: #6c757d;
+        }
+        .contact-info {
+            background-color: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 30px 0;
+            text-align: center;
+        }
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 2px solid #ecf0f1;
+            color: #7f8c8d;
+        }
+        .version {
+            font-size: 0.9em;
+            color: #95a5a6;
+        }
+        strong {
+            color: #2c3e50;
+        }
+        a {
+            color: #27ae60;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .icon {
+            font-size: 1.2em;
+            margin-right: 8px;
+        }
+        .table-of-contents {
+            background-color: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+        .table-of-contents h3 {
+            margin-top: 0;
+            color: #2c3e50;
+        }
+        .table-of-contents ul {
+            margin: 0;
+        }
+        .table-of-contents a {
+            color: #27ae60;
+            text-decoration: none;
+        }
+        .table-of-contents a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🚗 RideShareTrack User's Guide</h1>
+        <p style="text-align: center; color: #7f8c8d;"><strong>Everything you need to know about tracking your business</strong><br>
+        <em>Last Updated: October 22, 2025</em></p>
+
+        <div class="table-of-contents">
+            <h3>📋 Table of Contents</h3>
+            <ul>
+                <li><a href="#quick-start">⚡ Quick Start</a></li>
+                <li><a href="#getting-started">🎯 Getting Started</a></li>
+                <li><a href="#tracking-trips">🚗 Tracking Trips</a></li>
+                <li><a href="#managing-expenses">💰 Managing Expenses</a></li>
+                <li><a href="#generating-reports">📊 Generating Reports</a></li>
+                <li><a href="#tax-advice">📋 Tax Advice</a></li>
+                <li><a href="#troubleshooting">🔧 Troubleshooting</a></li>
+                <li><a href="#contact">📞 Contact & Support</a></li>
+            </ul>
+        </div>
+
+        <div id="quick-start" class="quick-start">
+            <h2>⚡ Quick Start</h2>
+            <p><strong>Welcome! Here's how to get started in 2 minutes:</strong></p>
+            
+            <div class="step">
+                <div class="step-number">1</div>
+                <div class="step-content">
+                    <h4>Grant Permissions</h4>
+                    <p>Allow location, camera, and voice access when prompted</p>
+                </div>
+            </div>
+            
+            <div class="step">
+                <div class="step-number">2</div>
+                <div class="step-content">
+                    <h4>Start Your Day</h4>
+                    <p>Tap "Start Tracking" when you begin driving</p>
+                </div>
+            </div>
+            
+            <div class="step">
+                <div class="step-number">3</div>
+                <div class="step-content">
+                    <h4>Voice Categorization</h4>
+                    <p>Say "Business" or "Personal" to categorize trips</p>
+                </div>
+            </div>
+            
+            <div class="step">
+                <div class="step-number">4</div>
+                <div class="step-content">
+                    <h4>Add Expenses</h4>
+                    <p>Scan receipts or add expenses manually</p>
+                </div>
+            </div>
+            
+            <div class="step">
+                <div class="step-number">5</div>
+                <div class="step-content">
+                    <h4>Generate Reports</h4>
+                    <p>Export tax-ready reports monthly</p>
+                </div>
+            </div>
+            
+            <div class="pro-tip">
+                <strong>💡 Pro Tip:</strong> Tax Pro includes voice commands for hands-free operation!
+            </div>
+        </div>
+
+        <div id="getting-started" class="section getting-started">
+            <h2>🎯 Getting Started</h2>
+            
+            <h3>First Time Setup</h3>
+            <ul>
+                <li>Grant location permission for automatic mileage tracking</li>
+                <li>Allow camera access for receipt scanning</li>
+                <li>Enable voice commands for hands-free categorization</li>
+                <li>Review privacy settings - all data stays on your device</li>
+                <li>Consider upgrading to Tax Pro for full automation</li>
+            </ul>
+
+            <h3>Data Safety</h3>
+            <div class="tip">
+                <ul>
+                    <li><strong>All your data is stored locally on your device</strong></li>
+                    <li><strong>Upgrading to Tax Pro preserves all existing trips and expenses</strong></li>
+                    <li><strong>No data loss when switching between Free and Pro tiers</strong></li>
+                </ul>
+            </div>
+
+            <h3>App Organization</h3>
+            <ul>
+                <li><strong>Tracker Tab:</strong> Start/stop mileage tracking</li>
+                <li><strong>Expenses Tab:</strong> Add business expenses & view receipts</li>
+                <li><strong>Trips Tab:</strong> Review and categorize drives</li>
+                <li><strong>Reports Tab:</strong> Generate tax documents</li>
+                <li><strong>Help Tab:</strong> Access this guide and support</li>
+            </ul>
+        </div>
+
+        <div id="tracking-trips" class="section tracking-trips">
+            <h2>🚗 Tracking Trips</h2>
+            
+            <h3>Automatic Tracking (Tax Pro)</h3>
+            <ul>
+                <li>App detects when you start/stop driving</li>
+                <li>Automatically calculates mileage</li>
+                <li>Voice commands for hands-free categorization</li>
+                <li>Background tracking enabled</li>
+            </ul>
+
+            <h3>Manual Tracking (Free)</h3>
+            <ul>
+                <li>Tap "Start Tracking" when beginning rides</li>
+                <li>Tap "Stop Tracking" when finished</li>
+                <li>App calculates distance automatically</li>
+                <li>Set trip category (business/personal)</li>
+            </ul>
+
+            <h3>Voice Commands (Tax Pro)</h3>
+            <ul>
+                <li>Say "Business" when starting a passenger trip</li>
+                <li>Say "Personal" when driving for yourself</li>
+                <li>App speaks: "Starting trip. Is this business or personal?"</li>
+                <li>Works even with gloves or while driving</li>
+            </ul>
+
+            <div class="tip">
+                <strong>💡 Important:</strong> Business trips are tax-deductible! Personal trips aren't.
+            </div>
+        </div>
+
+        <div id="managing-expenses" class="section managing-expenses">
+            <h2>💰 Managing Expenses</h2>
+            
+            <h3>Common Deductible Expenses</h3>
+            <ul>
+                <li>Gas and fuel</li>
+                <li>Car maintenance and repairs</li>
+                <li>Insurance premiums</li>
+                <li>Registration fees</li>
+                <li>Tolls and parking</li>
+                <li>Cell phone (business use)</li>
+            </ul>
+
+            <h3>Receipt Scanning (Tax Pro)</h3>
+            <ul>
+                <li>Take photo of receipt</li>
+                <li>App extracts amount and date</li>
+                <li>Review and categorize</li>
+                <li>Automatically saves as deductible</li>
+                <li>View all receipts in gallery</li>
+            </ul>
+
+            <h3>Receipt Gallery</h3>
+            <ul>
+                <li>Browse all saved receipt photos</li>
+                <li>Search receipts by description or category</li>
+                <li>Filter by expense type (Gas, Maintenance, etc.)</li>
+                <li>View full-screen receipt details</li>
+                <li>Share receipt images for tax preparation</li>
+            </ul>
+
+            <div class="warning">
+                <strong>⚠️ Important:</strong> Keep original receipts for your records!
+            </div>
+        </div>
+
+        <div id="generating-reports" class="section generating-reports">
+            <h2>📊 Generating Reports</h2>
+            
+            <h3>Monthly Reports</h3>
+            <ul>
+                <li>Business mileage summary</li>
+                <li>Deductible expenses breakdown</li>
+                <li>Total deductions calculation</li>
+                <li>IRS-ready format</li>
+            </ul>
+
+            <h3>Export Options (Tax Pro)</h3>
+            <ul>
+                <li>PDF reports for tax preparation</li>
+                <li>CSV files for accounting software</li>
+                <li>Quarterly and yearly summaries</li>
+                <li>Advanced analytics and insights</li>
+            </ul>
+
+            <div class="pro-tip">
+                <strong>📊 Pro Tip:</strong> Use reports with your tax professional or accounting software
+            </div>
+        </div>
+
+        <div id="tax-advice" class="section tax-advice">
+            <h2>📋 Tax Advice</h2>
+            
+            <h3>IRS Tax Guidelines</h3>
+            <ul>
+                <li><strong>2025 Mileage Rate: $0.70/mile</strong></li>
+                <li>Standard Mileage Deduction includes:</li>
+                <ul>
+                    <li>Depreciation</li>
+                    <li>Fuel</li>
+                    <li>Insurance</li>
+                    <li>Registration</li>
+                    <li>Repairs</li>
+                </ul>
+            </ul>
+
+            <h3>Important Rules</h3>
+            <ul>
+                <li>Separate business and personal trips</li>
+                <li>Keep detailed records</li>
+                <li>Mileage deduction OR actual expenses</li>
+                <li>Don't double-deduct</li>
+            </ul>
+
+            <div class="warning">
+                <strong>⚠️ Important:</strong> Consult a tax professional for specific advice!
+            </div>
+        </div>
+
+        <div id="troubleshooting" class="section troubleshooting">
+            <h2>🔧 Troubleshooting</h2>
+            
+            <div class="troubleshooting-item">
+                <h4>❌ Location not working</h4>
+                <p>✅ Check Location Services in Settings, ensure app has permission</p>
+            </div>
+
+            <div class="troubleshooting-item">
+                <h4>❌ Camera not scanning receipts</h4>
+                <p>✅ Grant camera permission, ensure good lighting, hold steady</p>
+            </div>
+
+            <div class="troubleshooting-item">
+                <h4>❌ Tracking stopped unexpectedly</h4>
+                <p>✅ Disable battery optimization for the app in Settings</p>
+            </div>
+
+            <div class="troubleshooting-item">
+                <h4>❌ Data disappeared</h4>
+                <p>✅ Data stays on device - check if you logged into different iCloud account</p>
+            </div>
+
+            <div class="troubleshooting-item">
+                <h4>❌ Subscription not working</h4>
+                <p>✅ Check App Store receipt, restart app, contact support</p>
+            </div>
+
+            <div class="tip">
+                <strong>🔧 Still having issues?</strong> Contact support through the app!
+            </div>
+        </div>
+
+        <div id="contact" class="contact-info">
+            <h2>📞 Need More Help?</h2>
+            <p><strong>Contact our support team:</strong></p>
+            <ul style="text-align: left; display: inline-block;">
+                <li><strong>Support Email:</strong> <a href="mailto:support@ridesharelog.app">support@ridesharelog.app</a></li>
+                <li><strong>Website:</strong> <a href="https://www.ridesharelog.app">www.ridesharelog.app</a></li>
+                <li><strong>Privacy Questions:</strong> <a href="mailto:privacy@ridesharelog.app">privacy@ridesharelog.app</a></li>
+            </ul>
+            
+            <h3>Additional Resources</h3>
+            <ul style="text-align: left; display: inline-block;">
+                <li>Contact support through the app</li>
+                <li>Check our FAQ online</li>
+                <li>Watch tutorial videos</li>
+                <li>Join the driver community</li>
+            </ul>
+        </div>
+
+        <hr>
+
+        <div class="footer">
+            <p><strong>RideShareTrack User's Guide</strong><br>
+            <span class="version">Version: 1.0 - Last Updated: October 22, 2025</span></p>
+            
+            <p>This guide covers all the essential features and tips for using RideShareTrack effectively. For the most up-to-date information, always check the app's Help section.</p>
+        </div>
+    </div>
+</body>
+</html>
